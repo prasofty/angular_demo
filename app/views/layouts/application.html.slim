@@ -1,0 +1,37 @@
+doctype html
+html
+  head
+    title AngularDemo
+    meta content="width=device-width, initial-scale=1" name="viewport" /
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  body
+    .container
+      /! Static navbar
+      nav.navbar.navbar-default
+        .container-fluid
+          .navbar-header
+            button.navbar-toggle.collapsed aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" type="button"
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand href="/"  Project Name
+          #navbar.navbar-collapse.collapse
+            ul.nav.navbar-nav.navbar-right
+              li.dropdown
+                a.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button"
+                  | Forms
+                  span.caret.ml-10
+                ul.dropdown-menu
+                  li
+                    a href="#"  Index
+                  li
+                    a href="#"  Create
+                  li.divider role="separator"
+                  li.dropdown-header Responses
+                  li
+                    a href="#"  Index
+      = yield
+
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
