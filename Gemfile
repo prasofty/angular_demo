@@ -6,7 +6,9 @@ gem 'rails', '4.2.4'
 # Use mysql as the database for Active Record
 gem 'mysql2', '~> 0.3.18'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '5.0.1'
+gem 'compass', '1.0.3'
+gem 'compass-rails', '2.0.4'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -57,4 +59,6 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-ui-router'
   gem 'rails-assets-angular-rails-resource'
   gem 'rails-assets-angular-bootstrap'
+  gem 'rails-assets-angular-form-builder'
+  gem 'rails-assets-angular-validator'
 end

@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
-
   api_version(:module => "V1a", :path => {:value => "api/v1.0"}) do
-    resources :forms
+    resources :forms do
+		resources :responses
+	end
   end
   resource :api, controller: :api do
     collection do

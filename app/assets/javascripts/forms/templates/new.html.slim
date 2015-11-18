@@ -1,0 +1,25 @@
+.page-header
+  h4
+    | New Form
+
+.row
+  .col-md-6
+    .panel.panel-default
+      .panel-heading
+        h3.panel-title Builder
+      div fb-builder="default"
+      .panel-footer
+        pre
+          | {{form.fields}}
+        .form-group
+          input#formTitle.form-control ng-model="form.title" placeholder="Title" validator="[required]"
+        .form-group
+          a.btn.btn-primary ng-click="save()"
+            | Save
+
+
+  .col-md-6
+    .panel.panel-default
+      .panel-heading
+        h3.panel-title Components
+      div fb-components=""

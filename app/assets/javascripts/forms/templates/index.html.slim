@@ -1,0 +1,21 @@
+.page-header
+    h4
+        | List of forms
+
+.row
+    .col-md-12
+        table.table.table-bordered
+            tr
+                td
+                    | S.No
+                td
+                    | Title
+                td
+                    | Updated At
+            tr ng-repeat="form in forms"
+                td
+                    | {{form.id}}
+                td
+                    a ui-sref="root.forms.show({id: form.id})" {{form.title}}
+                td
+                    | {{form.updatedAt}}

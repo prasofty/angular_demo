@@ -1,0 +1,15 @@
+.page-header
+    .btn-toolbar.pull-right
+        .btn-group
+            a.btn.btn-primary.pull-right ui-sref="root.forms.responses.new({form_id: form.id})"
+                | Add Response
+    h3
+        | {{form.title}}
+
+.row
+    .col-md-12
+        pre
+            | {{form.fields}}
+hr
+.row
+    .col-md-12
