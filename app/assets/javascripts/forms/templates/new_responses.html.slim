@@ -1,1 +1,13 @@
-Hi
+.page-header
+    h3.form-response-title
+        | {{form.title}} - Response
+
+.row
+    .col-md-12
+        form.form-horizontal
+            div fb-default="defaultValue" fb-form="default" ng-model="response"
+            .form-group
+                .col-md-8.col-md-offset-4
+                    input.btn.btn-default ng-click="submit()" type="submit" /
+        pre
+            | {{form.fields}}
